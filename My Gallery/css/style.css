@@ -1,0 +1,98 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 903px;
+    border: 2px solid forestgreen;
+    background-color:  rgba(20, 20, 20, 0.5);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(5,5,5, .7); */
+    background-image: linear-gradient(to bottom, rgba(5,5,5,0), rgba(5,5,5,1));
+    top: 301px;
+    transition: all .5s ease-in;
+}
+
+.img-title p,h3 {
+    text-align: center;
+    color: #fff;
+    line-height: 2px;
+    position: relative;
+    top: 230px;
+    text-shadow: 1px solid white 1px solid white rgba(5, 5, 5, .5);
+}
+
+.card:hover .img-title {
+    top: 0;
+    transition: all .5s ease-out;
+}
+
+.card img {
+    transform: scale(1);
+    transition: 0.3s ease-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    transition: all 1.3s ease-in;
+}
+
+a {
+    line-height: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 100;
+    text-align: center;
+    padding: 230px 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .2s ease-out;
+}
+
+.overlay img {
+    width: 20%;
+    margin: auto 0;
+}
+
+.overlay:target {
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    background-color: rgba(0,0,0, .8);
+    transition: all .2s ease-in;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    margin-left:  -20px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    line-height: 14px;
+    padding: 5px;
+}
+
